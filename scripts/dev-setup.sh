@@ -16,6 +16,6 @@ if command -v node >/dev/null 2>&1; then
     || { echo "Node $(node -v) is too old; need >= 22.12"; fail=1; }
 fi
 [ -n "${VCPKG_ROOT:-}" ] && [ -x "$VCPKG_ROOT/vcpkg" ] \
-  || { echo "MISSING: vcpkg — clone https://github.com/microsoft/vcpkg and set VCPKG_ROOT"; fail=1; }
+  || echo "WARNING: vcpkg not found (not needed until the engine links OpenCV/FFmpeg) — clone https://github.com/microsoft/vcpkg and set VCPKG_ROOT"
 
 [ "$fail" -eq 0 ] && echo "All prerequisites found." || exit 1

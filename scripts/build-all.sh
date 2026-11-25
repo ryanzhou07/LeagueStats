@@ -3,9 +3,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-cmake -S engine -B build -G Ninja
-cmake --build build
-ctest --test-dir build --output-on-failure
+cmake -S engine -B build-ninja -G Ninja
+cmake --build build-ninja
+ctest --test-dir build-ninja --output-on-failure
 
 cd desktop
 npm ci

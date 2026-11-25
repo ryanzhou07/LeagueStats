@@ -7,3 +7,17 @@ build-*/
 *.log
 .env
 graphify-out/
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+*.rofl
+*.mp4
+*.mkv
+coverage/
+*.tsbuildinfo
+.idea/
+.vscode/
